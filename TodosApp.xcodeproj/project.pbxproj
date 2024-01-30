@@ -14,6 +14,7 @@
 		5D43FA492B68B4A400A9E24B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43FA482B68B4A400A9E24B /* NetworkService.swift */; };
 		5D43FA4B2B68B4C400A9E24B /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43FA4A2B68B4C400A9E24B /* Todo.swift */; };
 		5D43FA4D2B68B6D700A9E24B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43FA4C2B68B6D700A9E24B /* HomePresenter.swift */; };
+		5D43FA542B68BFAD00A9E24B /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43FA532B68BFAD00A9E24B /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		5D43FA482B68B4A400A9E24B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		5D43FA4A2B68B4C400A9E24B /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		5D43FA4C2B68B6D700A9E24B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		5D43FA532B68BFAD00A9E24B /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				5D43FA3C2B68B3A300A9E24B /* Assets.xcassets */,
+				5D43FA522B68BF9400A9E24B /* Enum */,
 				5D43FA512B68BEC800A9E24B /* Model */,
 				5D43FA4F2B68BE6400A9E24B /* Network */,
 				5D43FA3E2B68B3A300A9E24B /* Preview Content */,
@@ -106,6 +109,14 @@
 				5D43FA4A2B68B4C400A9E24B /* Todo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5D43FA522B68BF9400A9E24B /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				5D43FA532B68BFAD00A9E24B /* ViewState.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 			files = (
 				5D43FA472B68B3C900A9E24B /* HomeView.swift in Sources */,
 				5D43FA492B68B4A400A9E24B /* NetworkService.swift in Sources */,
+				5D43FA542B68BFAD00A9E24B /* ViewState.swift in Sources */,
 				5D43FA4D2B68B6D700A9E24B /* HomePresenter.swift in Sources */,
 				5D43FA392B68B3A100A9E24B /* TodosAppApp.swift in Sources */,
 				5D43FA4B2B68B4C400A9E24B /* Todo.swift in Sources */,

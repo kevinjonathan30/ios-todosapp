@@ -21,6 +21,20 @@ class HomePresenter: ObservableObject {
         }
     }
     
+    var viewState: ViewState {
+        get {
+            if filteredTodos == nil {
+                return .loading
+            } else if let error = errorMessage {
+                return .error(error)
+            } else if let todos = filteredTodos, !todos.isEmpty {
+                return .loaded
+            } else {
+                return .empty
+            }
+        }
+    }
+    
     let networkService: NetworkService
     
     init(networkService: NetworkService) {

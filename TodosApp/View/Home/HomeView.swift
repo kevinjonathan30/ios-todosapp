@@ -17,26 +17,15 @@ struct HomeView: View {
     var body: some View {
         VStack {
             // Display your todos or error message based on presenter's state
-            if presenter.filteredTodos == nil {
-                VStack {
-                    ProgressView()
-                    Text("Loading..")
-                }
-            } else if let error = presenter.errorMessage {
-                Text("Error: \(error)")
-            } else if let todos = presenter.filteredTodos, !todos.isEmpty {
-                List(todos, id: \.id) { todo in
-                    HStack {
-                        Text(todo.title)
-                        Spacer()
-                        
-                        if todo.completed {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                }
-            } else {
-                Text("No Todos")
+            switch presenter.viewState {
+            case .loading:
+                loadingView
+            case .empty:
+                emptyView
+            case .loaded:
+                loadedView
+            case .error(let error):
+                errorView(error: error)
             }
         }
         .navigationTitle("Todos")
@@ -47,6 +36,47 @@ struct HomeView: View {
             self.presenter.fetchData()
         }
         .searchable(text: $presenter.searchText)
+    }
+}
+
+// MARK: ViewBuilder
+
+private extension HomeView {
+    @ViewBuilder 
+    var loadingView: some View {
+        VStack {
+            ProgressView()
+            Text("Loading..")
+        }
+    }
+    
+    @ViewBuilder 
+    var emptyView: some View {
+        Text("No Todos")
+    }
+    
+    @ViewBuilder 
+    var loadedView: some View {
+        List(presenter.filteredTodos ?? [], id: \.id) { todo in
+            todoItem(todo: todo)
+        }
+    }
+    
+    @ViewBuilder
+    func errorView(error: String) -> some View {
+        Text(error)
+    }
+    
+    @ViewBuilder
+    func todoItem(todo: Todo) -> some View {
+        HStack {
+            Text(todo.title)
+            Spacer()
+            
+            if todo.completed {
+                Image(systemName: "checkmark")
+            }
+        }
     }
 }
 
