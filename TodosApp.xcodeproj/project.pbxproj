@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5D43FA392B68B3A100A9E24B /* TodosAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43FA382B68B3A100A9E24B /* TodosAppApp.swift */; };
-		5D43FA3B2B68B3A100A9E24B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43FA3A2B68B3A100A9E24B /* ContentView.swift */; };
 		5D43FA3D2B68B3A300A9E24B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D43FA3C2B68B3A300A9E24B /* Assets.xcassets */; };
 		5D43FA402B68B3A300A9E24B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D43FA3F2B68B3A300A9E24B /* Preview Assets.xcassets */; };
 		5D43FA472B68B3C900A9E24B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43FA462B68B3C900A9E24B /* HomeView.swift */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		5D43FA352B68B3A100A9E24B /* TodosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D43FA382B68B3A100A9E24B /* TodosAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosAppApp.swift; sourceTree = "<group>"; };
-		5D43FA3A2B68B3A100A9E24B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5D43FA3C2B68B3A300A9E24B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D43FA3F2B68B3A300A9E24B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D43FA462B68B3C900A9E24B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -59,13 +57,11 @@
 		5D43FA372B68B3A100A9E24B /* TodosApp */ = {
 			isa = PBXGroup;
 			children = (
-				5D43FA4E2B68B90E00A9E24B /* Home */,
-				5D43FA382B68B3A100A9E24B /* TodosAppApp.swift */,
-				5D43FA3A2B68B3A100A9E24B /* ContentView.swift */,
 				5D43FA3C2B68B3A300A9E24B /* Assets.xcassets */,
+				5D43FA512B68BEC800A9E24B /* Model */,
+				5D43FA4F2B68BE6400A9E24B /* Network */,
 				5D43FA3E2B68B3A300A9E24B /* Preview Content */,
-				5D43FA482B68B4A400A9E24B /* NetworkService.swift */,
-				5D43FA4A2B68B4C400A9E24B /* Todo.swift */,
+				5D43FA502B68BE8600A9E24B /* View */,
 			);
 			path = TodosApp;
 			sourceTree = "<group>";
@@ -85,6 +81,31 @@
 				5D43FA4C2B68B6D700A9E24B /* HomePresenter.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		5D43FA4F2B68BE6400A9E24B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5D43FA482B68B4A400A9E24B /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5D43FA502B68BE8600A9E24B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D43FA382B68B3A100A9E24B /* TodosAppApp.swift */,
+				5D43FA4E2B68B90E00A9E24B /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D43FA512B68BEC800A9E24B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D43FA4A2B68B4C400A9E24B /* Todo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,7 +179,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D43FA472B68B3C900A9E24B /* HomeView.swift in Sources */,
-				5D43FA3B2B68B3A100A9E24B /* ContentView.swift in Sources */,
 				5D43FA492B68B4A400A9E24B /* NetworkService.swift in Sources */,
 				5D43FA4D2B68B6D700A9E24B /* HomePresenter.swift in Sources */,
 				5D43FA392B68B3A100A9E24B /* TodosAppApp.swift in Sources */,
